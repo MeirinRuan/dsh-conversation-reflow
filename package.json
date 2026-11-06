@@ -1,0 +1,60 @@
+{
+  "name": "dsh-conversation-reflow",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "author": "MeirinRuan",
+  "description": "Keep conversation text and Markdown table cells within the width available between sidebars. The plugin preserves font size and retains scrolling for content that still needs it.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MeirinRuan/dsh-conversation-reflow.git"
+  },
+  "homepage": "https://github.com/MeirinRuan/dsh-conversation-reflow#readme",
+  "bugs": {
+    "url": "https://github.com/MeirinRuan/dsh-conversation-reflow/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin",
+    "ui"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": "0.2.2-rc.1"
+  },
+  "packageManager": "pnpm@11.28.5",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.zh.md",
+    "LICENSE",
+    "docs/*.md"
+  ],
+  "scripts": {
+    "check": "node --check index.js && node --check client.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+url: https://github.com/MeirinRuan/dsh-conversation-reflow
+name: MeirinRuan/dsh-conversation-reflow
+category: ui
+description:
+  en: Keep conversation text and Markdown table cells within the width available between sidebars.
+  zh: 让会话文字和 Markdown 表格单元格适应侧栏之间的可用宽度，保持字号，并为仍需滚动的内容保留滚动。
+tarball: https://github.com/MeirinRuan/dsh-conversation-reflow/releases/latest/download/dsh-conversation-reflow.tgz
